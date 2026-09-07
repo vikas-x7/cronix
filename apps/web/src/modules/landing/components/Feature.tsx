@@ -35,6 +35,22 @@ const CARDS_DATA = [
   },
 ];
 
+const STATS_DATA = [
+  {
+    value: 'cron jobs',
+    description: 'Create and manage recurring schedules with ease.',
+  },
+  {
+    value: 'real-time logs',
+    description: 'Track every execution and debug failures quickly.',
+  },
+  {
+    value: 'one dashboard',
+    description:
+      'Control your jobs, triggers, and execution history from one place.',
+  },
+];
+
 export default function Feature() {
   return (
     <section id="features" className="bg-transparent">
@@ -74,6 +90,24 @@ export default function Feature() {
             </div>
           </div>
         ))}
+      </div>
+
+      <div className="border border-zinc-200 border-t-0">
+        <div className="grid grid-cols-1 md:grid-cols-3">
+          {STATS_DATA.map((stat, index) => (
+            <div
+              key={index}
+              className="flex flex-col items-center text-center p-8 sm:p-10 border-b md:border-b-0 md:border-r border-zinc-200 last:border-b-0 last:border-r-0"
+            >
+              <h3 className="text-3xl sm:text-4xl font-medium tracking-[-1px]">
+                {stat.value}
+              </h3>
+              <p className="mt-3 text-[15px] text-black/60 tracking-[-0.5px] max-w-[280px]">
+                {stat.description}
+              </p>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

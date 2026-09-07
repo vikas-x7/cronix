@@ -1,6 +1,6 @@
 'use client';
 
-export default function TrafficChart() {
+export default function ExecutionChart() {
   const bars = [
     { base: 40, top: 10 },
     { base: 40, top: 10 },
@@ -36,7 +36,7 @@ export default function TrafficChart() {
         }
       `}</style>
 
-      <section id="observe" className="relative overflow-hidden mt-30 px-6">
+      <section id="observe" className="relative overflow-hidden px-20">
         {/* <div className="inset-0 pointer-events-none">
           {Array.from({ length: 20 }).map((_, i) => (
             <div
@@ -48,18 +48,6 @@ export default function TrafficChart() {
         </div> */}
 
         <div className="relative z-10">
-          <div className="w-full  bg-white flex flex-col items-end justify-center text-end">
-            <h2 className=" text-2xl sm:text-3xl md:text-4xl lg:text-5xl tracking-[-1.5px] font-medium md:tracking-[-3.5px] text-black">
-              Stay in sync with your traffic in <br /> real time every request
-              is
-            </h2>
-            <p className="mt-5 tracking-[-0.75px]">
-              Track every HTTP request, monitor job durations, and debug
-              failures instantly. <br /> Cronix gives you full visibility into
-              your scheduled tasks and
-            </p>
-          </div>
-
           <div className="mt-10 sm:mt-14 md:mt-20 flex h-[200px] sm:h-[300px] md:h-[420px] items-end justify-between gap-[3px] sm:gap-1.5 md:gap-3">
             {bars.map((bar, index) => {
               const total =

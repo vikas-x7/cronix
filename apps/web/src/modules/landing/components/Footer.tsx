@@ -2,90 +2,113 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { FiGithub } from 'react-icons/fi';
+import { BiSolidSquare } from 'react-icons/bi';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
-  const handleSmoothScroll = (id: string) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
-  };
-
   return (
-    <>
-      <footer className="w-full bg-white pt-10 lg:pt-20 overflow-hidden border-t border-black/5 px-5">
-        <div className="w-full">
-          <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-8 lg:gap-0">
-            <div className="relative mt-0 lg:mt-10 select-none">
-              <h1 className="text-[25vw] leading-none font-semibold tracking-tighter text-black text-start md:text-[20vw] lg:text-[5vw]">
-                Cronix
-              </h1>
-              <div className="absolute inset-0 bg-linear-to-t from-white/30 to-transparent pointer-events-none" />
-            </div>
-            <div className="space-y-6 w-full lg:w-auto">
-              <div className="flex flex-wrap tracking-[-0.75px] items-center gap-x-6 gap-y-3 py-6 lg:py-8 border-t border-gray-100">
-                <button
-                  onClick={() => handleSmoothScroll('features')}
-                  className="text-xs sm:text-sm font-medium hover:text-black transition-colors cursor-pointer"
-                >
-                  Features
-                </button>
-                <Link
-                  href="/dashboard"
-                  className="text-xs sm:text-sm font-medium hover:text-black transition-colors"
-                >
-                  Documentation
-                </Link>
-                <button
-                  onClick={() => handleSmoothScroll('faq')}
-                  className="text-xs sm:text-sm font-medium hover:text-black transition-colors cursor-pointer"
-                >
-                  FAQ
-                </button>
-                <Link
-                  href="https://github.com/vikas-x7/cronix"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-xs sm:text-sm font-medium hover:text-black transition-colors flex items-center gap-1"
-                >
-                  <FiGithub size={14} />
-                  GitHub
-                </Link>
+    <footer
+      id="footer"
+      className="w-full  text-black pt-12 sm:pt-16 lg:pt-20 pb-8 px-6 sm:px-12 lg:px-10 border-t border-black/5"
+    >
+      <div className="mx-auto flex flex-col justify-between ">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
+          <div className="lg:col-span-7 flex flex-col justify-between">
+            <div>
+              {/* Logo */}
+              <div className="flex items-center">
+                <BiSolidSquare size={34} className="text-[#DF5BCC]" />
+                <span className="text-xl sm:text-3xl font-semibold tracking-[-1px]  text-black">
+                  Cronix.
+                </span>
               </div>
+
+              {/* Subheading */}
+              <p className="mt-8 sm:mt-10 text-sm sm:text-base md:text-[17px] text-black/90 max-w-md ">
+                Reach out to us to discover how our services can assist you in
+                accomplishing your objectives.
+              </p>
+            </div>
+
+            {/* Email Address */}
+            <div className="mt-10 sm:mt-14 lg:mt-20">
+              <a
+                href="mailto:Inquiry@cronix.io"
+                className="text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight text-black hover:opacity-80 transition-opacity"
+              >
+                Cronix@gamil.com
+              </a>
             </div>
           </div>
 
-          <div className="flex flex-col md:flex-row justify-between items-center py-8 lg:py-10 gap-3 lg:gap-4">
-            <p className="text-[10px] sm:text-xs text-black/60">
-              © {currentYear} Cronix. All rights reserved.
-            </p>
-            <div className="flex gap-4 sm:gap-6">
-              <Link
-                href="#"
-                className="text-[10px] sm:text-xs text-black/60 hover:text-black transition-colors"
-              >
-                Terms of Service
-              </Link>
-              <Link
-                href="#"
-                className="text-[10px] sm:text-xs text-black/60 hover:text-black transition-colors"
-              >
-                Privacy Policy
-              </Link>
+          {/* Right Column: Nav Columns */}
+          <div className="lg:col-span-5 grid grid-cols-2 gap-8 sm:gap-12 lg:justify-end lg:pl-16 pt-1">
+            {/* Company Column */}
+            <div>
+              <h3 className="text-[18px] font-semibold text-black  tracking-[-0.5px] mb-4 sm:mb-5">
+                Company
+              </h3>
+              <ul className="space-y-3 text-xs sm:text-sm text-neutral-600">
+                <li>
+                  <Link href="#" className="hover:text-black transition-colors">
+                    About
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#" className="hover:text-black transition-colors">
+                    History
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#" className="hover:text-black transition-colors">
+                    Mission
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            {/* Services Column */}
+            <div>
+              <h3 className="text-[18px] text-black font-semibold tracking-[-0.5px] mb-4 sm:mb-5">
+                Services
+              </h3>
+              <ul className="space-y-3 text-xs sm:text-sm text-neutral-600">
+                <li>
+                  <Link href="#" className="hover:text-black transition-colors">
+                    Capabilities
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#" className="hover:text-black transition-colors">
+                    Automation & Webhooks
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#" className="hover:text-black transition-colors">
+                    Documentation
+                  </Link>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
-      </footer>
 
-      <div className="relative flex justify-center items-center w-full">
-        {/* <div className="absolute z-10 inset-0 bg-gradient-to-b from-white via-white/10 to-transparent pointer-events-none w-full h-full"></div> */}
-        <img
-          src="https://i.pinimg.com/originals/e0/7d/42/e07d42fb8a190a63ea353096ccae059c.gif"
-          alt=""
-          className="w-50 h object-cover object-top "
-        />
+        {/* Bottom Bar */}
+        <div className="mt-16 sm:mt-24 lg:mt-32 pt-6 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 text-xs text-neutral-600 ">
+          <p>©{currentYear} Cronix All rights reserved</p>
+
+          <div className="flex items-center gap-6">
+            <Link href="#" className="hover:text-black transition-colors">
+              Legal Notice
+            </Link>
+            <Link href="#" className="hover:text-black transition-colors">
+              Terms & Conditions
+            </Link>
+          </div>
+        </div>
       </div>
-    </>
+    </footer>
   );
 };
 

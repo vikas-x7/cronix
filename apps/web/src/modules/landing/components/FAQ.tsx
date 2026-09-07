@@ -43,22 +43,22 @@ export default function FAQ() {
   return (
     <section
       id="faq"
-      className="w-full py-12 sm:py-16 px-4 md:px-10 lg:px-6 mt-10"
+      className="w-full py-12 sm:py-16 px-4 md:px-10 lg:px-20 mt-10"
     >
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-20 items-start">
         <div className="  w-full">
-          <h2 className="text-3xl sm:text-4xl font-medium lg:text-[44px] text-black -tracking-[1px] md:-tracking-[3px] mb-8 sm:mb-10">
-            Frequently Asked <br /> Questions
+          <h2 className="text-3xl sm:text-4xl font-medium lg:text-[44px] text-black - mb-8 sm:mb-10">
+            Frequently Asked Questions
           </h2>
 
-          <p className="mt-65 tracking-[-0.75px]">
+          <p className="mt-65 ">
             Everything you need to know about scheduling, monitoring, and
             scaling your automated tasks with Cronix.
           </p>
         </div>
 
         <div className="relative rounded-[5px] overflow-hidden  w-full mt-8 lg:mt-0">
-          <div className="border border-black/10 border-dashed   w-full">
+          <div className="border-t border-black/10 border-dashed   w-full">
             {faqs.map((f, i) => (
               <div
                 key={i}
@@ -67,7 +67,7 @@ export default function FAQ() {
               >
                 <div className="flex items-center justify-between py-4">
                   <span
-                    className={`font-medium tracking-[-1px] text-base sm:text-[18px] transition-colors duration-200 ${activeIndex === i ? 'text-black' : 'text-black/90'}`}
+                    className={`font-medium  text-base sm:text-[18px] transition-colors duration-200 ${activeIndex === i ? 'text-black' : 'text-black/90'}`}
                   >
                     {f.question}
                   </span>
@@ -77,7 +77,7 @@ export default function FAQ() {
                 <div
                   className={`overflow-hidden transition-all duration-300 ease-in-out ${activeIndex === i ? 'max-h-60 pb-4' : 'max-h-0'}`}
                 >
-                  <p className="text-black text-sm sm:text-[17px] tracking-[-0.75px] leading-relaxed">
+                  <p className="text-black text-sm sm:text-[17px] leading-relaxed">
                     {f.answer}
                   </p>
                 </div>

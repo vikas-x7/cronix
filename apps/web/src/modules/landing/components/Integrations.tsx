@@ -7,7 +7,7 @@ interface Logo {
   src: string;
 }
 
-const Integration = () => {
+const Integrations = () => {
   const leftLogos = [
     { name: 'Salesforce', src: '/sdf' },
     {
@@ -47,7 +47,7 @@ const Integration = () => {
   };
 
   const Box = ({ logo, index }: { logo: Logo; index: number }) => (
-    <div className="flex h-12 w-30 sm:h-20 sm:w-20 md:h-24 md:w-24 lg:h-20 lg:w-40 items-center justify-center border border-black/15 border-dashed  bg-transparent p-3 sm:p-4 md:p-6  transition">
+    <div className="flex h-12 w-30 sm:h-20 sm:w-20 md:h-24 md:w-24 lg:h-20 lg:w-70 items-center justify-center border border-black/15 border-dashed  bg-transparent p-3 sm:p-4 md:p-6  transition">
       {shouldShow(index, logo.src) && (
         <img
           src={logo.src}
@@ -61,16 +61,15 @@ const Integration = () => {
   return (
     <section
       id="integration"
-      className="bg-transparent py-12 sm:py-16 md:py-20 px-4 sm:px-6 min-h-[60vh] md:min-h-[30vh] flex items-center"
+      className="bg-transparent py-12 sm:py-16 md:py-20 px-4 sm:px-20 min-h-[60vh] md:min-h-[70vh] flex items-center "
     >
-      <div className="container mx-auto max-w-8xl text-center">
-        <h2 className="mt-4 text-xl sm:text-3xl md:text-4xl font-medium lg:text-[53px] -tracking-[0.5px] md:-tracking-[4px]">
-          Seamlessly Connect Your workflows
-        </h2>
-
-        <p className="mx-auto mt-2 text-sm sm:text-base md:text-lg text-black/90 max-w-2xl -tracking-[0.75px]">
-          Connect Cronix to your deployment platforms. Trigger automated
-          deployments, send requests to any cloud providers
+      <div className="container mx-auto max-w-8xl text-start">
+        <p className="mx-auto mt-2 text-sm sm:text-base md:text-[43px] text-black  tracking-[-1px] font-medium">
+          Connect cronix to your infrastructure
+        </p>
+        <p className="text-black/90">
+          Works with your existing deployments to schedule HTTP requests,
+          trigger webhooks, and automate background jobs.
         </p>
 
         <div className="mt-10 sm:mt-14 md:mt-20 flex flex-col items-center justify-center gap-4 md:flex-row md:gap-0">
@@ -80,11 +79,11 @@ const Integration = () => {
             ))}
           </div>
 
-          <div className="z-10 flex h-16 w-30 sm:h-20 sm:w-20 md:h-24 md:w-24 lg:h-15 lg:w-35 items-center justify-center bg-black text-white shadow-xl md:-mx-4">
-            <h3 className="text-sm sm:text-base md:text-lg lg:text-2xl md:tracking-[-1px] font-medium">
-              Cronix
+          {/* <div className="z-10 flex h-16 w-30 sm:h-20 sm:w-20 md:h-24 md:w-24 lg:h-10 lg:w-30 items-center justify-center bg-black text-white shadow-xl md:-mx-4">
+            <h3 className="text-sm sm:text-base md:text-lg lg:text-xl md:tracking-[-0.5px] font-medium">
+              Get start 
             </h3>
-          </div>
+          </div> */}
 
           <div className="grid grid-cols-3 ">
             {rightLogos.map((logo, index) => (
@@ -97,4 +96,4 @@ const Integration = () => {
   );
 };
 
-export default Integration;
+export default Integrations;

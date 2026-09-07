@@ -49,17 +49,24 @@ export default function LoginCard() {
 
   return (
     <div className="min-h-screen flex bg-white text-black tracking-[-0.25px]">
+      <div className="hidden lg:block lg:w-1/2 rounded-2xl ">
+        <img
+          src="https://i.pinimg.com/originals/9c/14/86/9c14863b9e64ffc65cdfda4cdc9a0b99.gif"
+          alt="Login visual"
+          className="w-full h-screen object-cover grayscale    "
+        />
+      </div>
       <div className="w-full lg:w-1/2 flex items-center justify-center">
-        <div className="absolute top-0 left-0 flex items-center mt-3 ml-3">
+        {/* <div className="absolute top-0 left-0 flex items-center mt-3 ml-3">
           <BiSolidSquare size={25} className="text-[#DF5BCC]" />
           <h1 className="text-[20px] font-semibold tracking-[-1.5px] ">
             Cronix
           </h1>
-        </div>
+        </div> */}
         <div className="w-full max-w-md px-6 text-center">
           <div className="mb-8 flex flex-col items-center justify-center">
             <h1 className="text-[25px] flex items-center  gap-2 font-semibold tracking-[-2px] ">
-              Welcome to <span className="text-[#DF5BCC]">cronix </span>
+              Welcome to cronix
             </h1>
             <p className="text-sm text-black/80 mt-1">
               Sign in to manage your cron jobs and automation workflows.
@@ -77,7 +84,7 @@ export default function LoginCard() {
               type="button"
               onClick={() => handleOAuth('google')}
               disabled={loadingProvider !== null}
-              className="w-full py-2 border border-neutral-300 text-[13px] text-black transition disabled:cursor-not-allowed disabled:opacity-60"
+              className="w-full py-2 border border-dashed border-neutral-300 text-[13px] text-black transition disabled:cursor-not-allowed disabled:opacity-60"
             >
               <span className="flex items-center justify-center gap-2">
                 {loadingProvider === 'google' ? (
@@ -93,7 +100,7 @@ export default function LoginCard() {
               type="button"
               onClick={() => handleOAuth('github')}
               disabled={loadingProvider !== null}
-              className="w-full py-2 border border-neutral-300 text-[13px] text-black transition disabled:cursor-not-allowed disabled:opacity-60"
+              className="w-full py-2 border border-dashed border-neutral-300 text-[13px] text-black transition disabled:cursor-not-allowed disabled:opacity-60"
             >
               <span className="flex items-center justify-center gap-2">
                 {loadingProvider === 'github' ? (
@@ -110,14 +117,6 @@ export default function LoginCard() {
             By continuing, you agree to our Terms and Privacy Policy.
           </p>
         </div>
-      </div>
-
-      <div className="hidden lg:block lg:w-1/2">
-        <img
-          src="https://i.pinimg.com/736x/f0/0e/54/f00e544446c28b629a1defa290d7928f.jpg"
-          alt="Login visual"
-          className="w-full h-screen object-cover"
-        />
       </div>
     </div>
   );

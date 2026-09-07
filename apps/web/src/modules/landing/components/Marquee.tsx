@@ -166,7 +166,7 @@ const marqueeItemsData = [
   },
 ];
 
-export default function MovingHeading() {
+export default function Marquee() {
   return (
     <>
       <style>{`
@@ -181,7 +181,7 @@ export default function MovingHeading() {
         }
       `}</style>
 
-      <section className="w-full overflow-hidden  bg-[#1C1A16]  font-cabin mt-30">
+      <section className="w-full overflow-hidden  bg-[#1C1A16]  font-cabin ">
         <div className="relative w-full overflow-hidden ">
           <div className="animate-marquee-loop">
             {[0, 1].map((group) => (

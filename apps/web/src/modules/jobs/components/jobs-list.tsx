@@ -21,6 +21,7 @@ import { useJobStore } from '@/store/jobStore';
 import { useUIStore } from '@/store/uiStore';
 import StatusBadge from '@/shared/components/status-badge';
 import PageLoader from '@/shared/components/page-loader';
+import LoadingIndicator from '@/shared/components/loading-indicator';
 import ConfirmationModal from '@/shared/components/confirmation-modal';
 import { IoAddSharp } from 'react-icons/io5';
 
@@ -497,7 +498,7 @@ export default function JobsList() {
     <Suspense
       fallback={
         <div className="w-full h-screen flex items-center justify-center bg-[#0D0D0D]">
-          <div className="h-8 w-8 animate-spin rounded-full border-4 border-neutral-700 border-t-white" />
+          <LoadingIndicator />
         </div>
       }
     >

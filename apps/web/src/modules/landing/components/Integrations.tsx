@@ -61,7 +61,7 @@ const Integrations = () => {
   return (
     <section
       id="integration"
-      className="bg-transparent py-12 sm:py-16 md:py-20 px-4 sm:px-20 min-h-[60vh] md:min-h-[70vh] flex items-center "
+      className="bg-transparent py-12 sm:py-16 md:py-20 px-4 sm:px-20  mb-30 flex items-center "
     >
       <div className="container mx-auto max-w-8xl text-start">
         <p className="mx-auto mt-2 text-sm sm:text-base md:text-[43px] text-black  tracking-[-1px] font-medium">

@@ -3,6 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { BiSolidSquare } from 'react-icons/bi';
+import { FiGithub } from 'react-icons/fi';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -10,7 +11,7 @@ const Footer = () => {
   return (
     <footer
       id="footer"
-      className="w-full  text-black pt-12 sm:pt-16 lg:pt-20 pb-8 px-6 sm:px-12 lg:px-10 border-t border-black/5"
+      className="w-full  text-black pt-12 sm:pt-16 lg:pt-20 pb-8 px-6 sm:px-12 lg:px-20 border-t border-black/5"
     >
       <div className="mx-auto flex flex-col justify-between ">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
@@ -29,6 +30,16 @@ const Footer = () => {
                 Reach out to us to discover how our services can assist you in
                 accomplishing your objectives.
               </p>
+
+              <a
+                href="https://github.com/vikas-x7/cronix"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-8 inline-flex items-center gap-2 bg-[#232323] text-white text-[13px] font-medium px-5 py-2.5 rounded-[3px] hover:bg-black transition-colors"
+              >
+                <FiGithub size={16} />
+                GitHub
+              </a>
             </div>
 
             {/* Email Address */}
@@ -44,49 +55,77 @@ const Footer = () => {
 
           {/* Right Column: Nav Columns */}
           <div className="lg:col-span-5 grid grid-cols-2 gap-8 sm:gap-12 lg:justify-end lg:pl-16 pt-1">
-            {/* Company Column */}
+            {/* Product Column */}
             <div>
-              <h3 className="text-[18px] font-semibold text-black  tracking-[-0.5px] mb-4 sm:mb-5">
-                Company
+              <h3 className="text-[13px] font-semibold text-black uppercase tracking-[-0.5px] mb-4 sm:mb-5">
+                Product
               </h3>
               <ul className="space-y-3 text-xs sm:text-sm text-neutral-600">
                 <li>
-                  <Link href="#" className="hover:text-black transition-colors">
-                    About
+                  <Link
+                    href="/documentation"
+                    className="hover:text-black transition-colors"
+                  >
+                    How it works
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="hover:text-black transition-colors">
-                    History
-                  </Link>
+                  <a
+                    href="#features"
+                    className="hover:text-black transition-colors"
+                  >
+                    Features
+                  </a>
                 </li>
                 <li>
-                  <Link href="#" className="hover:text-black transition-colors">
-                    Mission
+                  <a href="#" className="hover:text-black transition-colors">
+                    See Demo
+                  </a>
+                </li>
+                <li>
+                  <a href="#faq" className="hover:text-black transition-colors">
+                    Faq
+                  </a>
+                </li>
+                <li>
+                  <Link
+                    href="/dashboard"
+                    className="hover:text-black transition-colors"
+                  >
+                    Get started
                   </Link>
                 </li>
               </ul>
             </div>
 
-            {/* Services Column */}
+            {/* Boring But Necessary Column */}
             <div>
-              <h3 className="text-[18px] text-black font-semibold tracking-[-0.5px] mb-4 sm:mb-5">
-                Services
+              <h3 className="text-[13px] text-black font-semibold uppercase tracking-[-0.5px] mb-4 sm:mb-5">
+                The Boring But Necessary
               </h3>
               <ul className="space-y-3 text-xs sm:text-sm text-neutral-600">
                 <li>
-                  <Link href="#" className="hover:text-black transition-colors">
-                    Capabilities
+                  <Link
+                    href="/privacy-policy"
+                    className="hover:text-black transition-colors"
+                  >
+                    Privacy Policy
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="hover:text-black transition-colors">
-                    Automation & Webhooks
+                  <Link
+                    href="/terms-of-service"
+                    className="hover:text-black transition-colors"
+                  >
+                    Terms of Service
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="hover:text-black transition-colors">
-                    Documentation
+                  <Link
+                    href="/website-terms-of-use"
+                    className="hover:text-black transition-colors"
+                  >
+                    Website Terms of Use
                   </Link>
                 </li>
               </ul>
@@ -98,14 +137,7 @@ const Footer = () => {
         <div className="mt-16 sm:mt-24 lg:mt-32 pt-6 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 text-xs text-neutral-600 ">
           <p>©{currentYear} Cronix All rights reserved</p>
 
-          <div className="flex items-center gap-6">
-            <Link href="#" className="hover:text-black transition-colors">
-              Legal Notice
-            </Link>
-            <Link href="#" className="hover:text-black transition-colors">
-              Terms & Conditions
-            </Link>
-          </div>
+          <p>Made with all love 💗</p>
         </div>
       </div>
     </footer>

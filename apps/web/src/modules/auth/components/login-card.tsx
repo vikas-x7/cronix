@@ -6,6 +6,7 @@ import { FaGoogle, FaGithub } from 'react-icons/fa6';
 import { useAuthStore } from '../store/auth.store';
 import { FcGoogle } from 'react-icons/fc';
 import { BiSolidSquare } from 'react-icons/bi';
+import Link from 'next/link';
 
 const authErrors: Record<string, string> = {
   rate_limit:
@@ -113,8 +114,29 @@ export default function LoginCard() {
             </button>
           </div>
 
-          <p className="text-[11px] text-neutral-600 text-center mt-6">
-            By continuing, you agree to our Terms and Privacy Policy.
+          <p className="text-[11px] text-neutral-600 text-center mt-6 leading-relaxed">
+            By continuing, you agree to our{' '}
+            <Link
+              href="/terms-of-service"
+              className="underline hover:text-black transition-colors"
+            >
+              Terms of Service
+            </Link>
+            ,{' '}
+            <Link
+              href="/privacy-policy"
+              className="underline hover:text-black transition-colors"
+            >
+              Privacy Policy
+            </Link>
+            , and{' '}
+            <Link
+              href="/website-terms-of-use"
+              className="underline hover:text-black transition-colors"
+            >
+              Website Terms of Use
+            </Link>
+            .
           </p>
         </div>
       </div>

@@ -24,7 +24,7 @@ const Hero = () => {
       </div>
 
       {/* Full height container with content aligned to bottom left */}
-      <div className="relative z-10 h-full w-full flex flex-col justify-end items-start px-6 sm:px-12 lg:px-20 pb-12 sm:pb-16 lg:pb-20 text-white">
+      <div className="relative z-10 h-full w-full max-w-[100rem] mx-auto flex flex-col justify-end items-start px-6 sm:px-12 lg:px-20 pb-12 sm:pb-16 lg:pb-20 text-white">
         <div className="flex flex-col items-start max-w-4xl">
           <h1
             id="hero-heading"

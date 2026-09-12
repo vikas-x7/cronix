@@ -14,19 +14,23 @@ import FAQSection from './components/FAQSection';
 import Stats from './components/Stats';
 export default function Landing() {
   return (
-    <div className={`landing-page ${urbanist.className} ${urbanist.variable}`}>
+    <div
+      className={`landing-page w-full overflow-x-hidden ${urbanist.className} ${urbanist.variable}`}
+    >
       <Navbar />
       <Hero />
-      <JobTypes />
-      <WorkflowCards />
-      <Stats />
-      <Marquee />
-      <ExecutionChart />
-      <CoreFeatures />
-      <Integrations />
-      <FAQSection />
-      <CallToAction />
-      <Footer />
+      <div className="w-full max-w-[100rem] mx-auto">
+        <JobTypes />
+        <WorkflowCards />
+        <Stats />
+        <Marquee />
+        <ExecutionChart />
+        <CoreFeatures />
+        <Integrations />
+        <FAQSection />
+        <CallToAction />
+        <Footer />
+      </div>
     </div>
   );
 }

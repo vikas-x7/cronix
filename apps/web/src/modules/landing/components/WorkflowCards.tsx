@@ -69,6 +69,7 @@ const WorkflowCards: React.FC = () => {
                     alt={card.title}
                     fill
                     priority
+                    quality={75}
                     sizes="(max-width: 768px) 100vw, 33vw"
                     className="object-cover z-0"
                   />

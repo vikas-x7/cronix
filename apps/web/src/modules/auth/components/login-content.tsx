@@ -5,6 +5,7 @@ import { useRouter, useSearchParams } from 'next/navigation';
 import LoginCard from '@/modules/auth/components/login-card';
 import { useAuthStore } from '@/modules/auth';
 import { getMe } from '@/modules/auth/api/auth.api';
+import LoadingIndicator from '@/shared/components/loading-indicator';
 
 export default function LoginContent() {
   const router = useRouter();
@@ -41,12 +42,7 @@ export default function LoginContent() {
   if (status === 'success') {
     return (
       <div className="flex min-h-screen items-center justify-center bg-[#0D0D0D]">
-        <div className="flex flex-col items-center gap-4">
-          <div className="h-10 w-10 animate-spin rounded-full border-4 border-gray-200 border-t-gray-900" />
-          <p className="text-sm font-medium text-white/90 tracking-[-0.5px]">
-            Signing you in...
-          </p>
-        </div>
+        <LoadingIndicator />
       </div>
     );
   }

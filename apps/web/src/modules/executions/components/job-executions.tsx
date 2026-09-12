@@ -13,6 +13,7 @@ import { useJob } from '@/modules/jobs';
 import { formatDuration } from '@/shared/lib/utils';
 import { HiOutlineXMark } from 'react-icons/hi2';
 import { FiChevronDown } from 'react-icons/fi';
+import LoadingIndicator from '@/shared/components/loading-indicator';
 import type { Execution } from '@/modules/executions';
 
 function DarkSelect({
@@ -119,9 +120,7 @@ export default function JobExecutions() {
       </div>
       <div className="bg-[#1F1F1F] rounded-[10px] h-[92vh] overflow-y-auto">
         {isLoading ? (
-          <div className="h-64 flex items-center justify-center">
-            <div className="h-8 w-8 animate-spin rounded-full border-4 border-neutral-700 border-t-white" />
-          </div>
+          <LoadingIndicator />
         ) : isError ? (
           <div className="flex flex-col items-center justify-center p-12">
             <p className="text-[13px] text-neutral-500">

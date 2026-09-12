@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { FiX } from 'react-icons/fi';
 import { useExecution, useExecutionLogs } from '@/modules/executions';
 import StatusBadge from '@/shared/components/status-badge';
+import LoadingIndicator from '@/shared/components/loading-indicator';
 
 interface ExecutionDetailProps {
   executionId: string | null;
@@ -66,14 +67,7 @@ export default function ExecutionDetail({
 
             <div className="flex-1 overflow-y-auto slim-scrollbar p-5">
               {isLoading ? (
-                <div className="space-y-4">
-                  {Array.from({ length: 8 }).map((_, i) => (
-                    <div key={i} className="space-y-2">
-                      <div className="h-3 w-20 rounded bg-neutral-800 animate-pulse" />
-                      <div className="h-4 w-full rounded bg-neutral-800 animate-pulse" />
-                    </div>
-                  ))}
-                </div>
+                <LoadingIndicator />
               ) : execution ? (
                 <div className="space-y-5">
                   <div className="flex items-center gap-3">

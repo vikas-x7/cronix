@@ -18,6 +18,7 @@ import {
 } from '@/modules/jobs';
 import type { Workspace } from '../types/workspace.types';
 import { formatDate } from '@/shared/lib/utils';
+import LoadingIndicator from '@/shared/components/loading-indicator';
 
 interface WorkspaceDetailModalProps {
   workspace: Workspace | null;
@@ -104,14 +105,7 @@ export default function WorkspaceDetailModal({
             </div>
 
             {isLoading ? (
-              <div className="space-y-2">
-                {[1, 2, 3].map((i) => (
-                  <div
-                    key={i}
-                    className="h-16 rounded-[3px] bg-neutral-800 animate-pulse"
-                  />
-                ))}
-              </div>
+              <LoadingIndicator />
             ) : jobs.length === 0 ? (
               <div className="py-10 text-center">
                 <p className="text-[13px] text-neutral-500">

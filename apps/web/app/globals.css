@@ -44,3 +44,18 @@ body {
 .slim-scrollbar::-webkit-scrollbar-thumb:hover {
   background: #444444;
 }
+
+/* Loading indicator underline bar */
+.loader-bar {
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(currentColor 0 0) 0 100%/0% 100% no-repeat;
+  animation: loader-fill 1.5s linear infinite;
+  color: #DF5BCC;
+}
+
+@keyframes loader-fill {
+  to {
+    background-size: 100% 100%;
+  }
+}

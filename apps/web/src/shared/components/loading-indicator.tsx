@@ -10,6 +10,7 @@ export default function LoadingIndicator({
       <div className="flex flex-col items-center gap-3">
         <BiSolidSquare size={32} className="text-[#DF5BCC] animate-pulse" />
         <p className="text-[13px] text-neutral-500">{label}</p>
+        <div className="loader-bar w-24 rounded-full overflow-hidden" />
       </div>
     </div>
   );

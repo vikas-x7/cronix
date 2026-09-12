@@ -1,4 +1,10 @@
-<div align="left">
+<div align="center">
+
+<a href="https://github.com/vikas-x7/cronix">
+  <svg width="44" height="44" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-label="Cronix logo">
+    <rect width="20" height="20" x="2" y="2" rx="3" fill="#DF5BCC"/>
+  </svg>
+</a>
 
 # Cronix
 
@@ -21,7 +27,7 @@
 
 <div align="center">
 
-![Dashboard Preview 2](apps/web/public/image/dashboard-preview-2.png)
+![Dashboard Preview](apps/web/public/image/dashboad.png)
 
 </div>
 

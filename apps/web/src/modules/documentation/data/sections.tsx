@@ -32,7 +32,7 @@ export const sections: DocSection[] = [
         <div className="space-y-6">
           <div className="border border-neutral-800 rounded-[5px] p-5">
             <div className="flex items-center gap-3 mb-3">
-              <span className="text-[12px] font-medium text-[#DF5BCC] bg-[#DF5BCC]/10 px-2 py-0.5 rounded-[3px]">
+              <span className="text-[12px] font-medium text-neutral-400 bg-neutral-800 px-2 py-0.5 rounded-[3px]">
                 New
               </span>
               <h3
@@ -44,7 +44,7 @@ export const sections: DocSection[] = [
             </div>
             <ul className="space-y-2.5 text-[14px] text-neutral-300">
               <li className="flex gap-2">
-                <span className="text-[#DF5BCC] mt-1.5 shrink-0">•</span>
+                <span className="text-neutral-500 mt-1.5 shrink-0">•</span>
                 <span>
                   <strong className="text-white">Manual Run</strong> Execute API
                   requests directly from the Schedule page with instant response
@@ -52,7 +52,7 @@ export const sections: DocSection[] = [
                 </span>
               </li>
               <li className="flex gap-2">
-                <span className="text-[#DF5BCC] mt-1.5 shrink-0">•</span>
+                <span className="text-neutral-500 mt-1.5 shrink-0">•</span>
                 <span>
                   <strong className="text-white">Response Tab</strong> View
                   response body and headers in a dedicated tab after running a
@@ -60,14 +60,14 @@ export const sections: DocSection[] = [
                 </span>
               </li>
               <li className="flex gap-2">
-                <span className="text-[#DF5BCC] mt-1.5 shrink-0">•</span>
+                <span className="text-neutral-500 mt-1.5 shrink-0">•</span>
                 <span>
                   <strong className="text-white">SDK Page</strong> New SDK
                   integration page added (coming soon).
                 </span>
               </li>
               <li className="flex gap-2">
-                <span className="text-[#DF5BCC] mt-1.5 shrink-0">•</span>
+                <span className="text-neutral-500 mt-1.5 shrink-0">•</span>
                 <span>
                   <strong className="text-white">
                     Workspace Delete Confirmation
@@ -76,7 +76,7 @@ export const sections: DocSection[] = [
                 </span>
               </li>
               <li className="flex gap-2">
-                <span className="text-[#DF5BCC] mt-1.5 shrink-0">•</span>
+                <span className="text-neutral-500 mt-1.5 shrink-0">•</span>
                 <span>
                   <strong className="text-white">
                     Workspace Pagination Fix
@@ -89,7 +89,7 @@ export const sections: DocSection[] = [
 
           <div className="border border-neutral-800 rounded-[5px] p-5">
             <div className="flex items-center gap-3 mb-3">
-              <span className="text-[12px] font-medium text-green-400 bg-green-400/10 px-2 py-0.5 rounded-[3px]">
+              <span className="text-[12px] font-medium text-neutral-400 bg-neutral-800 px-2 py-0.5 rounded-[3px]">
                 Improved
               </span>
               <h3
@@ -101,7 +101,7 @@ export const sections: DocSection[] = [
             </div>
             <ul className="space-y-2.5 text-[14px] text-neutral-300">
               <li className="flex gap-2">
-                <span className="text-green-400 mt-1.5 shrink-0">•</span>
+                <span className="text-neutral-500 mt-1.5 shrink-0">•</span>
                 <span>
                   <strong className="text-white">Delete Modal Fix</strong>{' '}
                   Confirmation modal now closes properly after deleting a cron
@@ -109,14 +109,14 @@ export const sections: DocSection[] = [
                 </span>
               </li>
               <li className="flex gap-2">
-                <span className="text-green-400 mt-1.5 shrink-0">•</span>
+                <span className="text-neutral-500 mt-1.5 shrink-0">•</span>
                 <span>
                   <strong className="text-white">Workspace Cards Scroll</strong>{' '}
                   Fixed card overflow issue on the Workspaces page.
                 </span>
               </li>
               <li className="flex gap-2">
-                <span className="text-green-400 mt-1.5 shrink-0">•</span>
+                <span className="text-neutral-500 mt-1.5 shrink-0">•</span>
                 <span>
                   <strong className="text-white">Sidebar Updates</strong> Added
                   &quot;What&apos;s New&quot; card and SDK navigation item.

@@ -2,8 +2,8 @@
 
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { BiSolidSquare } from 'react-icons/bi';
 import { TbDeviceLaptop } from 'react-icons/tb';
+import LoadingIndicator from '@/shared/components/loading-indicator';
 import Sidebar from '@/modules/dashboard/components/sidebar';
 import { useAuth } from '@/modules/auth';
 
@@ -20,10 +20,7 @@ function ProtectedRoute({ children }: { children: React.ReactNode }) {
   if (isLoading) {
     return (
       <div className="flex min-h-screen items-center justify-center bg-neutral-950">
-        <div className="flex flex-col items-center gap-3">
-          <BiSolidSquare size={32} className="text-[#DF5BCC] animate-pulse" />
-          <p className="text-[13px] text-neutral-500">Loading...</p>
-        </div>
+        <LoadingIndicator />
       </div>
     );
   }

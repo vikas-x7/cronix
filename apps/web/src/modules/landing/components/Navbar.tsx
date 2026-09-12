@@ -92,7 +92,7 @@ const Navbar = () => {
 
           <Link
             href="/login"
-            className="text-[15px] font-medium text-white rounded-4xl transition-colors cursor-pointer bg-black px-4 py-1.5"
+            className="text-[15px] font-medium text-white rounded-[10px] transition-colors cursor-pointer bg-black px-4 py-1.5"
           >
             Login
           </Link>

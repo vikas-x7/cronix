@@ -57,7 +57,7 @@ export default function LoginCard() {
           className="w-full h-screen object-cover grayscale    "
         />
       </div>
-      <div className="w-full lg:w-1/2 flex items-center justify-center">
+      <div className="w-full lg:w-1/2 relative flex items-center justify-center">
         {/* <div className="absolute top-0 left-0 flex items-center mt-3 ml-3">
           <BiSolidSquare size={25} className="text-[#DF5BCC]" />
           <h1 className="text-[20px] font-semibold tracking-[-1.5px] ">
@@ -113,32 +113,25 @@ export default function LoginCard() {
               </span>
             </button>
           </div>
-
-          <p className="text-[11px] text-neutral-600 text-center mt-6 leading-relaxed">
-            By continuing, you agree to our{' '}
-            <Link
-              href="/terms-of-service"
-              className="underline hover:text-black transition-colors"
-            >
-              Terms of Service
-            </Link>
-            ,{' '}
-            <Link
-              href="/privacy-policy"
-              className="underline hover:text-black transition-colors"
-            >
-              Privacy Policy
-            </Link>
-            , and{' '}
-            <Link
-              href="/website-terms-of-use"
-              className="underline hover:text-black transition-colors"
-            >
-              Website Terms of Use
-            </Link>
-            .
-          </p>
         </div>
+
+        <p className="absolute bottom-6 left-1/2 -translate-x-1/2 w-full px-6 text-[11px] text-neutral-600 text-center leading-relaxed">
+          By continuing, you agree to our{' '}
+          <Link
+            href="/terms-of-service"
+            className="underline hover:text-black transition-colors"
+          >
+            Terms of Service
+          </Link>{' '}
+          and{' '}
+          <Link
+            href="/privacy-policy"
+            className="underline hover:text-black transition-colors"
+          >
+            Privacy Policy
+          </Link>
+          .
+        </p>
       </div>
     </div>
   );
